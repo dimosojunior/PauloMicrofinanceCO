@@ -597,7 +597,7 @@ class AddWatejaWoteView(APIView):
 
 
             # Send SMS notification to the registered mteja
-            message =f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh{deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0621690739 / 0747462389."
+            message =f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh{deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0762379023"
             phone_number = f"255{wateja.SimuYaMteja}"
 
             sms_response = None
@@ -617,7 +617,7 @@ class AddWatejaWoteView(APIView):
             # # Email notification to admin
             myemail = "juniordimoso8@gmail.com"
             subject = "GGJ - MKOPO"
-            message = f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh {deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. \n Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0621690739 / 0747462389."
+            message = f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh {deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. \n Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0762379023"
             from_email = settings.EMAIL_HOST_USER
             recipient_list = [EmailYaMteja]
             send_mail(subject, message, from_email, recipient_list, fail_silently=True)
@@ -776,7 +776,7 @@ class UpdateWatejaWotePostView(APIView):
                 # client = Client(account_sid, auth_token)
                 # message = client.messages \
                 #             .create(
-                #                 body=f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh {deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. \n Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0621690739 / 0747462389.",
+                #                 body=f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh {deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. \n Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0762379023",
                 #                 from_= sender_number,
                 #                 #to='+255744973421'
                 #                 to =f"+255{wateja.SimuYaMteja}"
@@ -785,7 +785,7 @@ class UpdateWatejaWotePostView(APIView):
                 # Sending SMS after registration
                 
                 # Send SMS notification to the registered mteja
-                message = f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh {deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. \n Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0621690739 / 0747462389."
+                message = f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh {deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. \n Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0762379023"
                 phone_number = f"255{wateja.SimuYaMteja}"
 
                 sms_response = None
@@ -803,7 +803,7 @@ class UpdateWatejaWotePostView(APIView):
                 # Email notification to admin
                 myemail = "juniordimoso8@gmail.com"
                 subject = "GGJ - MKOPO"
-                message = f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh {deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. \n Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0621690739 / 0747462389."
+                message = f"Ndugu {JinaKamiliLaMteja}, umepokea mkopo wa Tsh {deni_plus_riba}/=, unatakiwa umalize kurejesha tarehe {wateja.Up_To}. \n Hatua zitachukuliwa kama hutomaliza. \n Mawasiliano: 0762379023"
                 from_email = settings.EMAIL_HOST_USER
                 recipient_list = [EmailYaMteja]
                 send_mail(subject, message, from_email, recipient_list, fail_silently=True)
@@ -1145,8 +1145,9 @@ class WatejaWoteCartView(APIView):
             RejeshoLililoPokelewaLeo=KiasiChaRejeshoChaSiku
         )
 
-        message = f"Ndugu {Mteja.JinaKamiliLaMteja}, tumepokea rejesho lako la Tsh {KiasiChaRejeshoChaSiku}/= tarehe {today}. Deni lako ni Tsh {Mteja.JumlaYaDeni}/= \n Mawasiliano: 0621690739 / 0747462389. "
+        #message = f"Ndugu {Mteja.JinaKamiliLaMteja}, tumepokea rejesho lako la Tsh {KiasiChaRejeshoChaSiku}/= tarehe {today}. Deni lako ni Tsh {Mteja.JumlaYaDeni}/= \n Mawasiliano: 0762379023 "
         phone_number = f"255{Mteja.SimuYaMteja}"
+        message = f"Umefanikiwa: Rejesho la {Mteja.JinaKamiliLaMteja}, - Tsh {KiasiChaRejeshoChaSiku}/= tarehe {today} Tayari Limetumwa Makao Makuu. Deni lako ni Tsh {Mteja.JumlaYaDeni}/= \n Mawasiliano: 0762379023 "
 
         sms_response = None
         try:
@@ -1161,7 +1162,7 @@ class WatejaWoteCartView(APIView):
         # Email notification to admin
         myemail = "juniordimoso8@gmail.com"
         subject = "GGJ - MKOPO"
-        message = f"Ndugu {Mteja.JinaKamiliLaMteja}, tumepokea rejesho lako la Tsh {KiasiChaRejeshoChaSiku}/= tarehe {today}. Deni lako ni Tsh {Mteja.JumlaYaDeni}/= \n Mawasiliano: 0621690739 / 0747462389. "
+        message = f"Umefanikiwa: Rejesho la {Mteja.JinaKamiliLaMteja}, - Tsh {KiasiChaRejeshoChaSiku}/= tarehe {today} Tayari Limetumwa Makao Makuu. Deni lako ni Tsh {Mteja.JumlaYaDeni}/= \n Mawasiliano: 0762379023 "
         from_email = settings.EMAIL_HOST_USER
         recipient_list = [Mteja.EmailYaMteja]
         send_mail(subject, message, from_email, recipient_list, fail_silently=True)
